@@ -49,6 +49,12 @@ def test_onboarding_process_boy(app):
 
 
 
+def test_onboarding_process_gilr(app):
+    app.onboarding.open_login_page("https://ep.qtest.abcmouse.com/login")
+    app.login.to_abcmouse(email="alex3@ep.test", password="test123")
+
+    app.sign_up.select_no_thanks_assessment_subscription()
+    app.sign_up.select_no_thanks_assessment_subscription()
 
 
 

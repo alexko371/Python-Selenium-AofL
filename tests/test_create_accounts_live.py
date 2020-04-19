@@ -8,11 +8,11 @@ def test_create_live_account_boy(app):
     app.sign_up.click_submit_button()
 
     ##### Annual Subscription Page
-    app.sign_up.select_no_thanks_anual_subscription()
-    app.sign_up.close_anual_subscription_pop_up()
+    app.sign_up.select_no_thanks_annual_subscription()
+    app.sign_up.close_annual_subscription_pop_up()
 
     ###### Assessment Subscription Page
-    app.sign_up.select_no_thanks_assessment_subscription()
+    app.sign_up.select_no_thanks_free_trial_assessment_subscription()
 
     assert app.sign_up.thank_you_text()
 
