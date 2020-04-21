@@ -4,7 +4,7 @@ def test_create_live_account_boy(app):
     app.sign_up.open_abcmouse_web_page("https://www.abcmouse.com/abt/subscription")  # Update URL QTEST!
     app.sign_up.submit_and_confirm_email("sitetimer@live.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
-    app.credit_info.submit_cc_live(cardholder="Test Alex Ko")
+    app.payment_info.submit_cc_live(cardholder="Test Alex Ko")
     app.sign_up.click_submit_button()
 
     ##### Annual Subscription Page

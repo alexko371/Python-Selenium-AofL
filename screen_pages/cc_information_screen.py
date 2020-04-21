@@ -1,6 +1,6 @@
 from screen_pages.base_screen import BaseScreen
 
-class CreditInformation(BaseScreen):
+class PaymentInformation(BaseScreen):
 
     def expand_shadow_element(self, element):
         shadow_root = self.app.driver.execute_script('return arguments[0].shadowRoot', element)
@@ -38,18 +38,6 @@ class CreditInformation(BaseScreen):
 
 
 
-
-    def check_to_agree(self):
-        shadow_root1 = self.expand_root_1()
-        root2 = shadow_root1.find_element_by_css_selector("[name='legalText']")
-        shadow_root2 = self.expand_shadow_element(root2)
-
-        check_to_agree_checkbox = shadow_root2.find_element_by_id("checkbox-container")
-        self.app.driver.execute_script("arguments[0].click();", check_to_agree_checkbox)
-
-
-
-
     def submit_cc_live(self, cardholder):
         shadow_root1 = self.expand_root_1()
         cardholder_name_field = shadow_root1.find_element_by_css_selector("#card-name")
@@ -73,3 +61,23 @@ class CreditInformation(BaseScreen):
 
         zip_code_field = shadow_root1.find_element_by_css_selector("#zipcode")
         zip_code_field.send_keys("91203")
+
+
+################################################################
+    def submit_paypal_qtest(self):
+        shadow_root1 = self.expand_root_1()
+        root01 = shadow_root1.find_element_by_css_selector("#step-three > div.radio-container > abcmouse-radio-button:nth-child(2)")
+        shadow_root01 = self.expand_shadow_element(root01)
+        paypal_checkbox = shadow_root01.find_element_by_id("radio-wrapper")
+        paypal_checkbox.click()
+
+
+################################################################
+    def check_to_agree(self):
+        shadow_root1 = self.expand_root_1()
+        root2 = shadow_root1.find_element_by_css_selector("[name='legalText']")
+        shadow_root2 = self.expand_shadow_element(root2)
+
+        check_to_agree_checkbox = shadow_root2.find_element_by_id("checkbox-container")
+        self.app.driver.execute_script("arguments[0].click();", check_to_agree_checkbox)
+################################################################

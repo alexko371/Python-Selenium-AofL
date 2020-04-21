@@ -50,11 +50,25 @@ def test_onboarding_process_boy(app):
 
 
 def test_onboarding_process_gilr(app):
-    app.onboarding.open_login_page("https://ep.qtest.abcmouse.com/login")
-    app.login.to_abcmouse(email="alex3@ep.test", password="test123")
+    app.onboarding.open_login_page("https://bw.qtest.abcmouse.com/login")
+    app.login.to_abcmouse(email="ak002@bw.test", password="test123")
 
-    app.sign_up.select_no_thanks_assessment_subscription()
-    app.sign_up.select_no_thanks_assessment_subscription()
+    ###### ON-BOARDING PAGE
+    # app.onboarding.welcome_page_click_get_started_button()
+    # app.onboarding.survey_click_continue_buttons()
+    # app.onboarding.input_parent_name(parent_first_name="AK Test", parent_family_name="Ko Test")
+    ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
+    # app.onboarding.create_child_profile(child_name="G-1(ak-002)", gender="F", academic_level="pre-k")
+    app.onboarding.choose_avatar(avatar="boy_avatar11")  #####  girl_avatar01  |  girl_avatar16
+    app.onboarding.choose_hamster_and_fish(hamster="hamster-1", fish="fish-1", hamster_name="My Ham-StAr")
+    app.onboarding.skip_video()
+    app.onboarding.add_child()
+    ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
+    app.onboarding.create_child_profile(child_name="B-2", gender="M", academic_level="first-grade")
+    app.onboarding.choose_avatar(avatar="boy_avatar15")  #####   |  boy_avatar03  |  boy_avatar03
+    app.onboarding.choose_hamster_and_fish(hamster="hamster-2", fish="fish-2", hamster_name="My Ham-StAr")
+    app.onboarding.go_to_shp()
+    assert app.onboarding.mouse_pop_up()
 
 
 
