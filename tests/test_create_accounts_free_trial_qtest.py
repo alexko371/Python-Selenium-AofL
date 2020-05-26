@@ -1,7 +1,7 @@
 
 def test_create_free_trial_girl_and_boy(app):
-    app.sign_up.open_abcmouse_web_page("https://bw.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
-    app.sign_up.submit_and_confirm_email("ak1@bw.test") ##### Change Email Credentials!
+    app.sign_up.open_abcmouse_web_page("https://cl.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
+    app.sign_up.submit_and_confirm_email("elastic1@cl.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
     app.payment_info.submit_cc_qtest(cardholder="Test Alex Ko", code_cvv="1234", zip_code="12345")
 
@@ -21,22 +21,22 @@ def test_create_free_trial_girl_and_boy(app):
     app.onboarding.survey_click_continue_buttons()
     app.onboarding.input_parent_name(parent_first_name="AK Test", parent_family_name="Ko Test")
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="G1 (ak1)", gender="F", academic_level="preschool")
+    app.onboarding.create_child_profile(child_name="Amy(aqua-05)", gender="F", academic_level="preschool")
     app.onboarding.choose_avatar(avatar="girl_avatar03")  #####  girl_avatar01  |  girl_avatar16
     app.onboarding.choose_hamster_and_fish(hamster="hamster-1", fish="fish-1", hamster_name="My Ham-StAr")
     app.onboarding.skip_video()
 
     app.onboarding.add_child()
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="B2", gender="M", academic_level="kindergarten")
+    app.onboarding.create_child_profile(child_name="Tom", gender="M", academic_level="kindergarten")
     app.onboarding.choose_avatar(avatar="boy_avatar07")  #####   |  boy_avatar03  |  girl_avatar03
     app.onboarding.choose_hamster_and_fish(hamster="hamster-2", fish="fish-2", hamster_name="My Ham-StAr")
     app.onboarding.go_to_shp()
     assert app.onboarding.mouse_pop_up()
 
 def test_create_free_trial_boy_and_girl(app):
-    app.sign_up.open_abcmouse_web_page("https://ep.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
-    app.sign_up.submit_and_confirm_email("alex001@ep.test") ##### Change Email Credentials!
+    app.sign_up.open_abcmouse_web_page("https://cl.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
+    app.sign_up.submit_and_confirm_email("elastic2@cl.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
     app.payment_info.submit_cc_qtest(cardholder="Test Alex Ko", code_cvv="1234", zip_code="12345")
 
@@ -56,13 +56,13 @@ def test_create_free_trial_boy_and_girl(app):
     app.onboarding.survey_click_continue_buttons()
     app.onboarding.input_parent_name(parent_first_name="AK Test", parent_family_name="Ko Test")
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="Alex (alex001)", gender="M", academic_level="kindergarten")
+    app.onboarding.create_child_profile(child_name="Alex(aqua01)", gender="M", academic_level="kindergarten")
     app.onboarding.choose_avatar(avatar="boy_avatar05")  #####   |  boy_avatar03  |  girl_avatar03
     app.onboarding.choose_hamster_and_fish(hamster="hamster-3", fish="fish-3", hamster_name="My Ham-StAr")
     app.onboarding.skip_video()
     app.onboarding.add_child()
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="G2", gender="F", academic_level="first-grade")
+    app.onboarding.create_child_profile(child_name="Arya", gender="F", academic_level="first-grade")
     app.onboarding.choose_avatar(avatar="girl_avatar10")  #####  girl_avatar01  |  girl_avatar16
     app.onboarding.choose_hamster_and_fish(hamster="hamster-4", fish="fish-4", hamster_name="My Ham-StAr")
     app.onboarding.go_to_shp()
@@ -71,8 +71,8 @@ def test_create_free_trial_boy_and_girl(app):
 
 ###### FREE TRIAL WITH ASSESSMENT
 def test_create_free_trial_with_assessment_girl_and_boy(app):
-    app.sign_up.open_abcmouse_web_page("https://ep.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
-    app.sign_up.submit_and_confirm_email("alex02@ep.test") ##### Change Email Credentials!
+    app.sign_up.open_abcmouse_web_page("https://do.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
+    app.sign_up.submit_and_confirm_email("aqua1@do.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
     app.payment_info.submit_cc_qtest(cardholder="Test Alex Ko", code_cvv="1234", zip_code="12345")
 
@@ -92,21 +92,21 @@ def test_create_free_trial_with_assessment_girl_and_boy(app):
     app.onboarding.survey_click_continue_buttons()
     app.onboarding.input_parent_name(parent_first_name="AK Test", parent_family_name="Ko Test")
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="G1", gender="F", academic_level="preschool")
+    app.onboarding.create_child_profile(child_name="Marta (do1)", gender="F", academic_level="preschool")
     app.onboarding.choose_avatar(avatar="girl_avatar01")  #####  girl_avatar01  |  girl_avatar16
     app.onboarding.choose_hamster_and_fish(hamster="hamster-3", fish="fish-3", hamster_name="My Ham-StAr")
     app.onboarding.skip_video()
     app.onboarding.add_child()
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="B2", gender="M", academic_level="kindergarten")
+    app.onboarding.create_child_profile(child_name="Kyle", gender="M", academic_level="kindergarten")
     app.onboarding.choose_avatar(avatar="boy_avatar02")  #####   |  boy_avatar03  |  girl_avatar03
     app.onboarding.choose_hamster_and_fish(hamster="hamster-4", fish="fish-4", hamster_name="My Ham-StAr")
     app.onboarding.go_to_shp()
     assert app.onboarding.mouse_pop_up()
 
 def test_create_free_trial_with_assessment_boy_and_girl(app):
-    app.sign_up.open_abcmouse_web_page("https://ep.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
-    app.sign_up.submit_and_confirm_email("alex002@ep.test") ##### Change Email Credentials!
+    app.sign_up.open_abcmouse_web_page("https://dx.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
+    app.sign_up.submit_and_confirm_email("act1@dx.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
     app.payment_info.submit_cc_qtest(cardholder="Test Alex Ko", code_cvv="1234", zip_code="12345")
 
@@ -126,13 +126,13 @@ def test_create_free_trial_with_assessment_boy_and_girl(app):
     app.onboarding.survey_click_continue_buttons()
     app.onboarding.input_parent_name(parent_first_name="AK Test", parent_family_name="Ko Test")
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="Alex (alex001)", gender="M", academic_level="kindergarten")
+    app.onboarding.create_child_profile(child_name="Ben", gender="M", academic_level="kindergarten")
     app.onboarding.choose_avatar(avatar="boy_avatar08")  #####   |  boy_avatar03  |  girl_avatar03
     app.onboarding.choose_hamster_and_fish(hamster="hamster-1", fish="fish-1", hamster_name="My Ham-StAr")
     app.onboarding.skip_video()
     app.onboarding.add_child()
     ##### (grade Levels' IDs: [toddler-time] [preschool] [pre-k] [kindergarten] [first-grade] [second-grade]
-    app.onboarding.create_child_profile(child_name="G2", gender="F", academic_level="first-grade")
+    app.onboarding.create_child_profile(child_name="Gloria", gender="F", academic_level="first-grade")
     app.onboarding.choose_avatar(avatar="girl_avatar11")  #####  girl_avatar01  |  girl_avatar16
     app.onboarding.choose_hamster_and_fish(hamster="hamster-2", fish="fish-2", hamster_name="My Ham-StAr")
     app.onboarding.go_to_shp()

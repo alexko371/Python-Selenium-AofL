@@ -57,10 +57,6 @@ class CreateAccount(BaseScreen):
     def select_annual_subscription(self):
         time.sleep(2)
         shadow_root2 = self.expand_root_2()
-
-        # root01 = self.app.driver.find_element_by_tag_name("[style*='overflow'] landscape-upgrade-form")
-        # shadow_root002 = self.expand_shadow_element(shadow_root2)
-
         root02 = shadow_root2.find_element_by_css_selector("#paid-in-full")
         shadow_root002 = self.expand_shadow_element(root02)
         annual_subscription = shadow_root002.find_element_by_css_selector("#radio-wrapper")
@@ -79,8 +75,6 @@ class CreateAccount(BaseScreen):
     def select_no_thanks_annual_subscription(self):
         time.sleep(2)
         shadow_root2 = self.expand_root_2()
-        # root01 = self.app.driver.find_element_by_tag_name("[style*='overflow'] landscape-upgrade-form")
-        # shadow_root01 = self.expand_shadow_element(root01)
         root02 = shadow_root2.find_element_by_css_selector("#no-thanks")
         shadow_root02 = self.expand_shadow_element(root02)
         no_thanks = shadow_root02.find_element_by_css_selector("#radio-wrapper")
@@ -102,10 +96,6 @@ class CreateAccount(BaseScreen):
     def select_no_thanks_free_trial_assessment_subscription(self):
         time.sleep(3)
         shadow_root3 = self.expand_root_3()
-
-        # root0001 = self.app.driver.find_element_by_css_selector("[reactivation='subscription']")
-        # shadow_root0001 = self.expand_shadow_element(root0001)
-
         root03 = shadow_root3.find_element_by_css_selector("#no-thanks")
         shadow_root003 = self.expand_shadow_element(root03)
         assessment_no_thanks = shadow_root003.find_element_by_css_selector("#radio-wrapper")
