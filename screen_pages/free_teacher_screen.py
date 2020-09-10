@@ -57,7 +57,7 @@ class FreeTeacherScreen(BaseScreen):
 
     def proceed_to_welcome_page(self):
         # Submit Next Button
-        button = self.wait_until_button_clickable("button_next_img")
+        button = self.wait_until_id_clickable("button_next_img")
         return button.click()
 
 
@@ -81,7 +81,7 @@ class FreeTeacherScreen(BaseScreen):
 
     def proceed_to_abcmouse_page(self):
         # Step 3: Get Started on ABCmouse.com Button
-        button = self.wait_until_button_clickable("getting-started-next")
+        button = self.wait_until_id_clickable("getting-started-next")
         return button.click()
 
 
@@ -91,19 +91,19 @@ class FreeTeacherScreen(BaseScreen):
         return welcome_string
 
     def survey_title(self, survey_title):
-        text_string = self.wait_until_text_visible(csslocator="h1.title.alignleft", text_string=survey_title)
+        text_string = self.wait_until_text_visible_by_css(css_locator="h1.title.alignleft", text_string=survey_title)
         return text_string
 
     def step_1_title(self, title):
-        text_string = self.wait_until_text_visible(csslocator="h1.title.alignleft", text_string=title)
+        text_string = self.wait_until_text_visible_by_css(css_locator="h1.title.alignleft", text_string=title)
         return text_string
 
     def step_2_title(self, title):
-        text_string = self.wait_until_text_visible(csslocator="h1.title.alignleft", text_string=title)
+        text_string = self.wait_until_text_visible_by_css(css_locator="h1.title.alignleft", text_string=title)
         return text_string
 
     def step_3_title(self, title):
-        text_string = self.wait_until_text_visible(csslocator="h1.title.alignleft", text_string=title)
+        text_string = self.wait_until_text_visible_by_css(css_locator="h1.title.alignleft", text_string=title)
         return text_string
 
     def teacher_image_icon(self):
@@ -114,6 +114,6 @@ class FreeTeacherScreen(BaseScreen):
         iframe2 = self.app.driver.find_element_by_id("mainFrame")
         self.app.driver.switch_to.frame(iframe2)
 
-        text_string = self.wait_until_text_visible(csslocator="span[class*='HomepageCtrl__intro']", text_string=welcome_string)
-        return text_string
+        text_string = self.wait_until_text_visible_by_css(css_locator="span[class*='HomepageCtrl__intro']", text_string=welcome_string)
         self.app.driver.switch_to.default_content()
+        return text_string

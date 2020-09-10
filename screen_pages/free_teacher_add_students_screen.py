@@ -1,7 +1,7 @@
 from screen_pages.base_screen import BaseScreen
 import time
 
-class Students(BaseScreen):
+class FreeTeacherStudents(BaseScreen):
 
     def create_girl_toddler(self, name, birthday):
         self.student_name(name)
@@ -89,48 +89,48 @@ class Students(BaseScreen):
 
 
     def student_name(self, st_name):
-        self.app.driver.find_element_by_id("students-name").send_keys(st_name)
+        self.wait_until_id_clickable("students-name").send_keys(st_name)
 
     def student_birthday(self, st_birthday):
-        self.app.driver.find_element_by_id("student-birthday").send_keys(st_birthday)
+        self.wait_until_id_clickable("student-birthday").send_keys(st_birthday)
 
     def toddler_time(self, grade_level="div[data-value='0']"):
-        self.app.driver.find_element_by_id("students-grade-select-button").click()
-        self.app.driver.find_element_by_css_selector(grade_level).click()
+        self.wait_until_id_clickable("students-grade-select-button").click()
+        self.wait_until_css_clickable(grade_level).click()
 
     def preschool(self, grade_level="div[data-value='1']"):
-        self.app.driver.find_element_by_id("students-grade-select-button").click()
-        self.app.driver.find_element_by_css_selector(grade_level).click()
+        self.wait_until_id_clickable("students-grade-select-button").click()
+        self.wait_until_css_clickable(grade_level).click()
 
     def pre_k(self, grade_level="div[data-value='3']"):
-        self.app.driver.find_element_by_id("students-grade-select-button").click()
-        self.app.driver.find_element_by_css_selector(grade_level).click()
+        self.wait_until_id_clickable("students-grade-select-button").click()
+        self.wait_until_css_clickable(grade_level).click()
 
     def kindergarten(self, grade_level="div[data-value='5']"):
-        self.app.driver.find_element_by_id("students-grade-select-button").click()
-        self.app.driver.find_element_by_css_selector(grade_level).click()
+        self.wait_until_id_clickable("students-grade-select-button").click()
+        self.wait_until_css_clickable(grade_level).click()
 
     def first_grade(self, grade_level="div[data-value='7']"):
-        self.app.driver.find_element_by_id("students-grade-select-button").click()
-        self.app.driver.find_element_by_css_selector(grade_level).click()
+        self.wait_until_id_clickable("students-grade-select-button").click()
+        self.wait_until_css_clickable(grade_level).click()
 
     def second_grade(self, grade_level="div[data-value='9']"):
-        self.app.driver.find_element_by_id("students-grade-select-button").click()
-        self.app.driver.find_element_by_css_selector(grade_level).click()
+        self.wait_until_id_clickable("students-grade-select-button").click()
+        self.wait_until_css_clickable(grade_level).click()
 
     def student_girl(self):
-        self.app.driver.find_element_by_id("students-gender-select-button").click()
-        self.app.driver.find_element_by_css_selector("div[data-value='F']").click()
+        self.wait_until_id_clickable("students-gender-select-button").click()
+        self.wait_until_css_clickable("div[data-value='F']").click()
 
     def student_boy(self):
-        self.app.driver.find_element_by_id("students-gender-select-button").click()
-        self.app.driver.find_element_by_css_selector("div[data-value='M']").click()
+        self.wait_until_id_clickable("students-gender-select-button").click()
+        self.wait_until_css_clickable("div[data-value='M']").click()
 
     def add_student(self):
-        self.app.driver.find_element_by_id("students-add-button").click()
+        self.wait_until_id_clickable("students-add-button").click()
         time.sleep(1)
 
     def confirm_class_proceed_to_step_3(self):
         # Add Student Next Button
-        self.app.driver.find_element_by_id("add-students-next").click()
-        self.app.driver.find_element_by_id("add-student-popup-next").click()
+        self.wait_until_id_clickable("add-students-next").click()
+        self.wait_until_id_clickable("add-student-popup-next").click()
