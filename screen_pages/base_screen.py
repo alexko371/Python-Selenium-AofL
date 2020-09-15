@@ -18,6 +18,9 @@ class BaseScreen:
     def wait_until_text_visible_by_xpath(self, xpath_locator, text_string):
         return self.wait().until(EC.text_to_be_present_in_element((By.XPATH, xpath_locator), text_string))
 
+    def wait_until_text_value_visible_by_xpath(self, xpath_locator, text_string):
+        return self.wait().until(EC.text_to_be_present_in_element_value((By.XPATH, xpath_locator), text_string))
+
     def wait_until_frame_available_by_id(self, id_locator):
         return self.wait().until(EC.frame_to_be_available_and_switch_to_it((By.ID, id_locator)))
 

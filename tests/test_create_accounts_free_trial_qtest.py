@@ -1,7 +1,7 @@
 
 def test_create_free_trial_girl_and_boy(app):
     app.sign_up.open_abcmouse_web_page("https://dk.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
-    app.sign_up.submit_and_confirm_email("akonb@dk.test") ##### Change Email Credentials!
+    app.sign_up.submit_and_confirm_email("ipad@dk.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
     app.payment_info.submit_cc_qtest(cardholder="Test Alex Ko", code_cvv="1234", zip_code="12345")
 
@@ -36,8 +36,8 @@ def test_create_free_trial_girl_and_boy(app):
     # assert app.onboarding.mouse_pop_up()
 
 def test_create_free_trial_boy_and_girl(app):
-    app.sign_up.open_abcmouse_web_page("https://db.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
-    app.sign_up.submit_and_confirm_email("mac1@db.test") ##### Change Email Credentials!
+    app.sign_up.open_abcmouse_web_page("https://dk.qtest.abcmouse.com/abt/subscription")  # Update URL QTEST!
+    app.sign_up.submit_and_confirm_email("android1@dk.test") ##### Change Email Credentials!
     app.sign_up.submit_and_confirm_password("test123")
     app.payment_info.submit_cc_qtest(cardholder="Test Alex Ko", code_cvv="1234", zip_code="12345")
 

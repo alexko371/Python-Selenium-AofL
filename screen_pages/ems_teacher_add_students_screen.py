@@ -86,6 +86,7 @@ class EmsStudents(BaseScreen):
         self.add_student()
 
     def create_ems_boy_first_grade(self, first_name, last_name, ext_id):
+        self.click_create_students_button()
         self.submit_student_full_name(first_name, last_name, ext_id)
         self.select_school()
         self.select_first_grade()
@@ -115,13 +116,13 @@ class EmsStudents(BaseScreen):
 
     """CREATE STUDENTS LINK"""
     def click_create_students_button(self):
-        time.sleep(1)
+        time.sleep(2)
         self.open_ems_iframe()
         self.wait_until_css_clickable("[class*='plus-icon']").click()
         self.app.driver.switch_to.default_content()
 
     def submit_student_full_name(self, first_name, last_name, ext_id):
-        time.sleep(1)
+        time.sleep(2)
         self.open_ems_iframe()
         add_first_name = self.wait_until_xpath_clickable("(//input[contains(@class,'emsInput__input')]) [1]")
         add_first_name.send_keys(first_name)
@@ -134,7 +135,7 @@ class EmsStudents(BaseScreen):
     def select_school (self):
         self.open_ems_iframe()
         self.wait_until_id_clickable("emsForm__select--student-school").click()
-        self.wait_until_css_clickable("[label='Test School']").click()
+        self.wait_until_css_clickable("[label='Test School 1']").click()
         self.app.driver.switch_to.default_content()
 
     def select_section(self):

@@ -2,9 +2,9 @@
 
 def test_01_create_free_teacher_account(app):
     # app.free_teacher.open_teacher_registration_page("https://www.abcmouse.com/teacher-registration") # Update URL QTEST!
-    app.free_teacher.open_teacher_registration_page("https://fa.qtest.abcmouse.com/teacher-registration")  # Update URL QTEST!
+    app.free_teacher.open_teacher_registration_page("https://bn.qtest.abcmouse.com/teacher-registration")  # Update URL QTEST!
     app.free_teacher.input_name(fname="AK Test", lname="(Free Teacher)")
-    app.free_teacher.submit_email("ft1@dk.test")
+    app.free_teacher.submit_email("ft1@bn.test")
     app.free_teacher.submit_confirm_password("test123")
     app.free_teacher.submit_district_info_fields(state_value="CA", school_district_value="Abc Unified School District")
     app.free_teacher.submit_school_info_fields(school_name="Test ABCMouse", address="LA Test", city="Los Angeles", zip="12345",
